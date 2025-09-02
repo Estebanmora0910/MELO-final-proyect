@@ -1,0 +1,367 @@
+/* Estilos para contacto.php - Scoped a .contact-content, dinámico y responsivo */
+
+.contact-content {
+  animation: fadeIn 0.5s ease-in-out forwards; /* Entry animation */
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* FORM STYLES */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0984e3;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .containertwo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .formulario {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .formulario:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-row {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3436;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #636e72;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #0984e3;
+    box-shadow: 0 0 8px rgba(9, 132, 227, 0.3);
+    outline: none;
+  }
+
+  .boton {
+    background: #f39c12; /* Orange to match Mi Perfil */
+    border: none;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .boton:hover {
+    background: #d35400;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(243, 156, 18, 0.5);
+  }
+
+  /* CONTACT SECTION (Footer-like) */
+  .contact {
+    background: linear-gradient(135deg, #2d3436, #1e272e);
+    padding: 60px 0;
+    color: #ffffff;
+  }
+
+  .contact h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .contact h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #dfe6e9;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 1.05rem;
+    color: #b2bec3;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .contact a.text-white {
+    color: #dfe6e9 !important;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .contact a.text-white:hover {
+    color: #0984e3 !important;
+    transition: color 0.3s ease;
+  }
+
+  .contact a.text-white::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0984e3;
+    transition: width 0.3s ease;
+  }
+
+  .contact a.text-white:hover::after {
+    width: 100%;
+  }
+
+  .contact svg {
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .contact svg:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(1.2);
+  }
+
+  .contact .facebook {
+    color: #3b5998;
+  }
+
+  .contact .instagram {
+    color: #E4405F;
+  }
+
+  .contact hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 2.5rem 0;
+  }
+
+  .contact .btn-link {
+    color: #dfe6e9 !important;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact .btn-link:hover {
+    color: #0984e3 !important;
+    transition: color 0.3s ease;
+  }
+
+  /* MODAL STYLES */
+  #privacyModal .modal-content {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  #privacyModal .modal-header {
+    border-bottom: 1px solid #dfe6e9;
+    background: #f1f3f5;
+    border-radius: 15px 15px 0 0;
+  }
+
+  #privacyModal .modal-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0984e3;
+  }
+
+  #privacyModal .modal-body h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-top: 1.5rem;
+  }
+
+  #privacyModal .modal-body p {
+    font-size: 1rem;
+    color: #636e72;
+    line-height: 1.6;
+  }
+
+  #privacyModal .modal-footer .btn-outline-danger {
+    color: #e84393;
+    border-color: #e84393;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+
+  #privacyModal .modal-footer .btn-outline-danger:hover {
+    background: #e84393;
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  #privacyModal .modal-footer .btn-primary {
+    background: #0984e3;
+    border-color: #0984e3;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+
+  #privacyModal .modal-footer .btn-primary:hover {
+    background: #0652dd;
+    border-color: #0652dd;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* RESPONSIVE STYLES */
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .containertwo {
+      padding: 30px 15px;
+    }
+
+    .formulario {
+      padding: 20px;
+    }
+
+    .contact {
+      padding: 40px 0;
+    }
+
+    .contact h1 {
+      font-size: 2rem;
+    }
+
+    .contact h5 {
+      font-size: 1.2rem;
+    }
+
+    .contact p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .containertwo {
+      padding: 20px 10px;
+    }
+
+    .formulario {
+      padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    .boton {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+
+    .contact .row > div[class^="col-lg-"] {
+      text-align: center !important;
+      margin-bottom: 30px;
+    }
+
+    .contact svg {
+      margin: 0 20px;
+    }
+
+    .contact h1 {
+      font-size: 1.8rem;
+    }
+
+    .contact h5 {
+      font-size: 1.1rem;
+    }
+
+    .contact p {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    label {
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      font-size: 0.85rem;
+    }
+
+    .boton {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .contact h1 {
+      font-size: 1.6rem;
+    }
+
+    .contact h5 {
+      font-size: 1rem;
+    }
+
+    .contact p {
+      font-size: 0.9rem;
+    }
+
+    #privacyModal .modal-dialog {
+      margin: 1rem;
+    }
+
+    #privacyModal .modal-body p {
+      font-size: 0.9rem;
+    }
+  }
+}

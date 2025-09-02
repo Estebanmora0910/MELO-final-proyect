@@ -1,0 +1,271 @@
+/* Estilos para el botón de regresar */
+main.main-content .header-actions {
+  display: flex !important;
+  justify-content: center !important; /* Centra el botón horizontalmente */
+  margin-bottom: 25px !important;
+}
+
+main.main-content .header-actions .back-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 24px !important;
+  background: linear-gradient(90deg, #6c757d, #8a959e) !important; /* Gradiente gris */
+  color: white !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+main.main-content .header-actions .back-button:hover {
+  background: linear-gradient(90deg, #5a6268, #767e86) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.back-icon {
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Contenedor de dos columnas */
+.container {
+  display: flex;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Columna izquierda */
+.left-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-column h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-detail p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.product-detail p strong {
+  color: #1a1a1a;
+}
+
+/* Botón de edición */
+.edit-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px; /* Espacio arriba del botón único */
+  width: 100%; /* Botón full-width para mejor UX */
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Columna derecha (vacía por ahora, pero mantenida por si se necesita) */
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px; /* Un poco más ancho para acomodar todos los campos */
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto; /* Scroll si es necesario en pantallas pequeñas */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.modal-content button.close-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-content button.close-button:hover {
+  background-color: #b02a37;
+}
+
+/* Animación para el modal */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo para el select de productos */
+#id_producto {
+  margin-bottom: 10px;
+}
+
+#id_producto_nuevo {
+  margin-bottom: 15px;
+}
+
+/* Estilos para el mensaje de confirmación */
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #28a745, #34c759); /* Gradiente verde */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #218838;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+  animation: fadeIn 0.5s ease-in;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.message-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Animación para el mensaje */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .modal-content {
+    width: 90%;
+  }
+}

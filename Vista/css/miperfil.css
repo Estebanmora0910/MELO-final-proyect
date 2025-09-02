@@ -1,0 +1,389 @@
+/* Estilos para miperfil.php - Coherentes con header_carrito.css, aplicados solo dentro de .miperfil-container */
+
+/* Contenedor principal */
+.miperfil-container .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #dfe6e9);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid #b2bec3;
+}
+
+/* Título principal */
+.miperfil-container .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.miperfil-container .title i {
+    color: #0984e3;
+    margin-left: 10px;
+}
+
+/* Acciones del header */
+.miperfil-container .header-actions {
+    margin-bottom: 20px;
+}
+
+.miperfil-container .btn-secondary {
+    background: #636e72;
+    border: 2px solid #636e72;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miperfil-container .btn-secondary:hover {
+    background: #2d3436;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.miperfil-container .btn-secondary:active {
+    transform: scale(0.95);
+}
+
+.miperfil-container .btn-secondary i {
+    margin-right: 8px;
+}
+
+/* Lista de perfil */
+.miperfil-container .profile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.miperfil-container .profile-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px dashed #b2bec3;
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.miperfil-container .profile-item:last-child {
+    border-bottom: none;
+}
+
+.miperfil-container .field-name {
+    font-weight: 600;
+    color: #0984e3;
+    flex: 1;
+}
+
+.miperfil-container .field-name i {
+    margin-right: 10px;
+}
+
+.miperfil-container .field-value {
+    flex: 2;
+    color: #2d3436;
+}
+
+.miperfil-container .edit-icon {
+    background: #f39c12;
+    border: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(243, 156, 18, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miperfil-container .edit-icon:hover {
+    background: #d35400;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 16px rgba(243, 156, 18, 0.5);
+}
+
+.miperfil-container .edit-icon:active {
+    transform: scale(0.95);
+}
+
+/* Modal */
+.miperfil-container .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+}
+
+.miperfil-container .modal.show-modal {
+    display: flex;
+}
+
+.miperfil-container .modal-content {
+    background: linear-gradient(145deg, #ffffff, #dfe6e9);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid #b2bec3;
+    position: relative;
+}
+
+.miperfil-container .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e84393;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.miperfil-container .close-btn:hover {
+    background: #b71c1c;
+    transform: scale(1.1);
+}
+
+.miperfil-container .close-btn:active {
+    transform: scale(0.95);
+}
+
+.miperfil-container .modal-content h3 {
+    font-size: 1.8rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.miperfil-container .modal-content h3 i {
+    color: #0984e3;
+    margin-right: 10px;
+}
+
+.miperfil-container .form-group {
+    margin-bottom: 20px;
+}
+
+.miperfil-container .form-group label {
+    font-weight: 600;
+    color: #0984e3;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.miperfil-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #b2bec3;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #2d3436;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miperfil-container .form-group input:focus {
+    border-color: #0984e3;
+    box-shadow: 0 0 8px rgba(9, 132, 227, 0.3);
+    outline: none;
+}
+
+.miperfil-container .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.miperfil-container .btn-update, .miperfil-container .btn-cancel {
+    width: 48%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miperfil-container .btn-update {
+    background: #00b894;
+    border: 2px solid #00b894;
+    color: #ffffff;
+}
+
+.miperfil-container .btn-update:hover {
+    background: #009d77;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 184, 148, 0.3);
+}
+
+.miperfil-container .btn-update:active {
+    transform: scale(0.95);
+}
+
+.miperfil-container .btn-cancel {
+    background: #636e72;
+    border: 2px solid #636e72;
+    color: #ffffff;
+}
+
+.miperfil-container .btn-cancel:hover {
+    background: #2d3436;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.miperfil-container .btn-cancel:active {
+    transform: scale(0.95);
+}
+
+/* Alerta personalizada */
+.miperfil-container .custom-alert {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1200;
+    transition: opacity 0.5s ease;
+}
+
+.miperfil-container .custom-alert.alert-success {
+    background: #00b894;
+    color: #ffffff;
+}
+
+.miperfil-container .custom-alert.alert-error {
+    background: #e84393;
+    color: #ffffff;
+}
+
+/* Mensaje de error */
+.miperfil-container .message {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.miperfil-container .message.show {
+    display: block;
+}
+
+.miperfil-container .message[style*="color: red"] {
+    background: #e84393;
+    color: #ffffff;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .miperfil-container .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .miperfil-container .title {
+        font-size: 2rem;
+    }
+
+    .miperfil-container .profile-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .miperfil-container .field-name, .miperfil-container .field-value {
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+    .miperfil-container .edit-icon {
+        align-self: flex-end;
+    }
+
+    .miperfil-container .modal-content {
+        max-width: 90vw;
+        padding: 15px;
+    }
+
+    .miperfil-container .btn-update, .miperfil-container .btn-cancel {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .miperfil-container .container {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .miperfil-container .title {
+        font-size: 1.8rem;
+    }
+
+    .miperfil-container .btn-secondary {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .miperfil-container .profile-item {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .miperfil-container .modal-content {
+        max-width: 95vw;
+        padding: 12px;
+    }
+
+    .miperfil-container .form-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .miperfil-container .btn-update, .miperfil-container .btn-cancel {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .miperfil-container .custom-alert {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

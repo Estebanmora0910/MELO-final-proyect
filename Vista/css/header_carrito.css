@@ -1,0 +1,523 @@
+/* Estilos para el header y footer - Scoped a contenedores específicos, sin animaciones en el carrito, carrito responsivo */
+
+/* HEADER STYLES - Scoped to .header-container */
+.header-container .navbar {
+    background: linear-gradient(135deg, #ffffff, #f1f3f5) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative !important;
+}
+
+.header-container .navbar:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.header-container .nav-link {
+    color: #2d3436 !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.header-container .nav-link:hover {
+    color: #0984e3 !important;
+    transform: translateY(-2px) scale(1.02);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-container .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #0984e3;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.header-container .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header-container .nav-link:active {
+    transform: scale(0.95);
+    color: #0652dd !important;
+}
+
+.header-container .btn-outline-custom {
+    color: #0984e3;
+    border: 2px solid #0984e3;
+    border-radius: 25px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.header-container .btn-outline-custom:hover {
+    background: #0984e3;
+    color: #ffffff !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container .btn-danger {
+    background: #d63031;
+    border-color: #d63031;
+    border-radius: 25px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.header-container .btn-danger:hover {
+    background: #b71c1c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container .btn-danger:active {
+    transform: scale(0.95);
+}
+
+.header-container .btn-perfil {
+    background: #f39c12; /* Vibrant orange */
+    border-color: #f39c12;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px 20px;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.header-container .btn-perfil:hover {
+    background: #d35400; /* Darker orange */
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 6px 16px rgba(243, 156, 18, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-container .btn-perfil:active {
+    transform: scale(0.95);
+}
+
+.header-container .carrito-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.header-container .carrito-boton {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #0984e3;
+}
+
+.header-container .contador-carrito {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    background: #e84393; /* Vibrant pink for contrast */
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container .carrito-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 420px;
+    max-width: 95vw; /* Responsive width */
+    background: linear-gradient(145deg, #ffffff, #dfe6e9);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    z-index: 1000;
+    max-height: 520px;
+    overflow-y: auto;
+    border: 1px solid #b2bec3;
+}
+
+.header-container .carrito-hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.header-container .carrito-visible {
+    display: block;
+    pointer-events: auto;
+}
+
+.header-container .carrito-container .list-group {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.header-container .carrito-container .list-group-item {
+    border: none;
+    border-bottom: 1px dashed #b2bec3;
+    padding: 15px;
+    font-size: 1rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-container .carrito-container .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.header-container .carrito-total {
+    font-weight: 600;
+    color: #00b894;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container .d-flex.justify-content-between {
+    justify-content: space-between !important;
+    gap: 10px;
+}
+
+.header-container .btn-vaciar, 
+.header-container .btn-pagar {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    width: 48%;
+}
+
+.header-container .btn-vaciar {
+    background: #636e72;
+    border-color: #636e72;
+    color: #ffffff;
+}
+
+.header-container .btn-pagar {
+    background: #0984e3;
+    border-color: #0984e3;
+    color: #ffffff;
+}
+
+.header-container .menos-cantidad, 
+.header-container .mas-cantidad, 
+.header-container .eliminar-producto {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.header-container .menos-cantidad {
+    background: #fdcb6e;
+    border-color: #fdcb6e;
+    color: #2d3436;
+}
+
+.header-container .mas-cantidad {
+    background: #00b894;
+    border-color: #00b894;
+    color: #ffffff;
+}
+
+.header-container .eliminar-producto {
+    background: #e84393;
+    border-color: #e84393;
+    color: #ffffff;
+}
+
+/* FOOTER STYLES - Scoped to .footer-container */
+.footer-container .contact {
+    background: linear-gradient(135deg, #2d3436, #1e272e) !important;
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.footer-container .contact .container {
+    max-width: 1200px;
+}
+
+.footer-container .contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-container .contact h5 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #dfe6e9;
+    font-weight: 600;
+}
+
+.footer-container .contact p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.footer-container .contact a.text-white {
+    color: #dfe6e9 !important;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-container .contact a.text-white:hover {
+    color: #0984e3 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-container .contact a.text-white::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0984e3;
+    transition: width 0.3s ease;
+}
+
+.footer-container .contact a.text-white:hover::after {
+    width: 100%;
+}
+
+.footer-container .contact svg {
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-container .contact svg:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(1.2);
+}
+
+.footer-container .contact .facebook {
+    color: #3b5998;
+}
+
+.footer-container .contact .instagram {
+    color: #E4405F;
+}
+
+.footer-container .contact hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 2.5rem 0;
+}
+
+.footer-container .contact p.text-center {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #b2bec3;
+}
+
+.footer-container .contact .btn-link {
+    color: #dfe6e9 !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-container .contact .btn-link:hover {
+    color: #0984e3 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-container #privacyModal .modal-content {
+    background: #ffffff;
+    color: #2d3436;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.footer-container #privacyModal .modal-header {
+    border-bottom: 1px solid #dfe6e9;
+    background: #f1f3f5;
+    border-radius: 15px 15px 0 0;
+}
+
+.footer-container #privacyModal .modal-body h6 {
+    color: #0984e3;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-container #privacyModal .modal-footer .btn-outline-danger {
+    color: #e84393;
+    border-color: #e84393;
+    border-radius: 20px;
+}
+
+.footer-container #privacyModal .modal-footer .btn-outline-danger:hover {
+    background: #e84393;
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-container #privacyModal .modal-footer .btn-primary {
+    background: #0984e3;
+    border-color: #0984e3;
+    border-radius: 20px;
+}
+
+.footer-container #privacyModal .modal-footer .btn-primary:hover {
+    background: #0652dd;
+    border-color: #0652dd;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 992px) {
+    .header-container .navbar-collapse {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-container .nav-item {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header-container .carrito-container {
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+        top: 100%;
+    }
+
+    .header-container .carrito-container .list-group-item {
+        padding: 12px;
+        font-size: 0.95rem;
+        gap: 10px;
+    }
+
+    .header-container .carrito-total {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .header-container .btn-vaciar, 
+    .header-container .btn-pagar {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 48%;
+    }
+
+    .header-container .menos-cantidad, 
+    .header-container .mas-cantidad, 
+    .header-container .eliminar-producto {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        margin: 0 6px;
+    }
+
+    .footer-container .contact .row > div[class^="col-lg-"] {
+        text-align: center !important;
+        margin-bottom: 40px;
+    }
+
+    .footer-container .contact svg {
+        margin: 0 20px;
+    }
+
+    .footer-container .contact h1 {
+        font-size: 2rem;
+    }
+
+    .footer-container .contact h5 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container .d-flex.align-items-center form {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header-container .btn-outline-custom, 
+    .header-container .btn-perfil, 
+    .header-container .btn-danger {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .header-container .carrito-container {
+        width: 95vw;
+        padding: 12px;
+    }
+
+    .header-container .carrito-container .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .header-container .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .header-container .btn-vaciar, 
+    .header-container .btn-pagar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-container .btn-vaciar {
+        margin-right: 0;
+    }
+
+    .header-container .menos-cantidad, 
+    .header-container .mas-cantidad, 
+    .header-container .eliminar-producto {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+}
+/* Hacer el header fijo */
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* por encima de todo */
+}
+
+/* Ajustar el espacio del body para que el header no tape el contenido */
+body {
+    padding-top: 100px; /* ajusta según la altura del header */
+}
+
+/* Hacerlo un poco más grande */
+.header-container .navbar {
+    padding: 1.2rem 1rem; /* más alto que el default */
+    font-size: 1.1rem;
+}
+
+.header-container .navbar-brand img {
+    width: 120px !important; /* logo más grande */
+}
+
+.header-container .nav-link {
+    font-size: 1.2rem; /* letras más grandes */
+    padding: 12px 20px;
+}

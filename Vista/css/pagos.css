@@ -1,0 +1,322 @@
+/* Estilos para pagos.php - Scoped a .payments-content, dinámico y responsivo */
+
+.payments-content {
+  animation: fadeIn 0.5s ease-in-out forwards; /* Entry animation */
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* MAIN CONTAINER STYLES */
+  .container {
+    max-width: 1200px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4dabf7; /* Lighter blue from stylescatalogo.css */
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* PEDIDO CONTAINER */
+  .pedido-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .pedido-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .pedido-container h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #00b894;
+    margin-bottom: 1.5rem;
+  }
+
+  .list-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .list-group-item {
+    background: #f8f9fa;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #2d3436;
+    transition: background-color 0.3s ease;
+  }
+
+  .list-group-item:hover {
+    background: #dfe6e9;
+  }
+
+  .carrito-total {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00b894;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary {
+    background: #f39c12; /* Orange to match Mi Perfil */
+    border-color: #f39c12;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+  }
+
+  .btn-primary:hover {
+    background: #d35400;
+    border-color: #d35400;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(243, 156, 18, 0.5);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-primary:disabled {
+    background: #b2bec3;
+    border-color: #b2bec3;
+    cursor: not-allowed;
+  }
+
+  .btn-outline-secondary {
+    border-color: #636e72;
+    color: #636e72;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+
+  .btn-outline-secondary:hover {
+    background: #636e72;
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-danger {
+    background: #e84393;
+    border-color: #e84393;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .btn-danger:hover {
+    background: #d81b60;
+    border-color: #d81b60;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* PEDIDO BOX */
+  .pedido-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pedido-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .pedido-box h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4dabf7; /* Lighter blue from stylescatalogo.css */
+    margin-bottom: 1rem;
+  }
+
+  .pedido-box p {
+    font-size: 1rem;
+    color: #636e72;
+    margin-bottom: 0.75rem;
+  }
+
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .product-list li {
+    font-size: 0.95rem;
+    color: #2d3436;
+    padding: 5px 0;
+    border-bottom: 1px dashed #dfe6e9;
+  }
+
+  .estado-pagado {
+    color: #00b894;
+    font-weight: 600;
+  }
+
+  .estado-pendiente {
+    color: #f39c12;
+    font-weight: 600;
+  }
+
+  .estado-cancelado {
+    color: #e84393;
+    font-weight: 600;
+  }
+
+  .form-check {
+    margin-bottom: 0.5rem;
+  }
+
+  .form-check-input:checked {
+    background-color: #f39c12; /* Orange to match Mi Perfil */
+    border-color: #f39c12;
+  }
+
+  .form-check-label {
+    font-size: 1rem;
+    color: #2d3436;
+  }
+
+  /* ALERTA CONTENEDOR */
+  .alerta-contenedor {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    width: 300px;
+  }
+
+  .alert {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+  }
+
+  .alert-success {
+    background: #00b894;
+    color: #ffffff;
+    border: none;
+  }
+
+  .alert-danger {
+    background: #e84393;
+    color: #ffffff;
+    border: none;
+  }
+
+  .alert-info {
+    background: #4dabf7; /* Lighter blue from stylescatalogo.css */
+    color: #ffffff;
+    border: none;
+  }
+
+  /* RESPONSIVE STYLES */
+  @media (max-width: 992px) {
+    .container {
+      padding: 30px 15px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .pedido-container {
+      padding: 20px;
+    }
+
+    .pedido-box {
+      padding: 20px;
+    }
+
+    .pedido-box h4 {
+      font-size: 1.2rem;
+    }
+
+    .product-list li {
+      font-size: 0.9rem;
+    }
+
+    .btn-primary, .btn-danger {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 10px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .pedido-container h3 {
+      font-size: 1.5rem;
+    }
+
+    .pedido-box {
+      padding: 15px;
+    }
+
+    .d-flex.justify-content-between {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-primary, .btn-danger, .btn-outline-secondary {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .alerta-contenedor {
+      width: 90%;
+      right: 5%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .pedido-container h3 {
+      font-size: 1.3rem;
+    }
+
+    .pedido-box h4 {
+      font-size: 1.1rem;
+    }
+
+    .product-list li {
+      font-size: 0.85rem;
+    }
+
+    .form-check-label {
+      font-size: 0.9rem;
+    }
+  }
+}

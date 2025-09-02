@@ -1,0 +1,113 @@
+    body {
+      background-color: #f4f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .admin-header {
+      background-color: #004085;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-logo {
+      height: 50px;
+      border-radius: 8px;
+    }
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #66b0ff;
+    }
+    .logout-button {
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .logout-button:hover {
+      background-color: #c82333;
+    }
+    .main-content {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .welcome-box {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .welcome-box h2 {
+      color: #004085;
+      margin-bottom: 0.5rem;
+    }
+    .filter-box {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .filter-box label {
+      font-weight: 500;
+      color: #333;
+    }
+    .filter-box select, .filter-box input {
+      max-width: 200px;
+    }
+    .table {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .table th {
+      background-color: #004085;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+    }
+    .table td {
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+    .table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    .table tr:hover {
+      background-color: #e9ecef;
+    }
+    .tipo-entrada {
+      color: #28a745;
+      font-weight: 500;
+    }
+    .tipo-salida {
+      color: #dc3545;
+      font-weight: 500;
+    }

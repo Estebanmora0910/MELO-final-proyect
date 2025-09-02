@@ -1,0 +1,226 @@
+/* Estilos para login.php, registrarse.php, registro-exitoso.php - Scoped a .auth-content, dinámico y responsivo */
+
+.auth-content {
+  animation: fadeIn 0.5s ease-in-out forwards; /* Entry animation */
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* SECTION STYLES */
+  .login-section,
+  .registro-section,
+  .success-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 60px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .card-body {
+    padding: 40px;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4dabf7; /* Light blue from stylescatalogo.css */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* FORM STYLES */
+  .form-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control {
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    color: #636e72;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .form-control:focus {
+    border-color: #f39c12; /* Orange to match Mi Perfil */
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.3);
+    outline: none;
+  }
+
+  .btn-login {
+    background: #f39c12; /* Orange to match Mi Perfil */
+    border-color: #f39c12;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-login:hover {
+    background: #d35400;
+    border-color: #d35400;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(243, 156, 18, 0.5);
+  }
+
+  /* ALERT STYLES */
+  .alert {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s ease;
+  }
+
+  .alert-success {
+    background: #00b894;
+    color: #ffffff;
+    border: none;
+  }
+
+  .alert-danger {
+    background: #e84393;
+    color: #ffffff;
+    border: none;
+  }
+
+  .btn-close {
+    filter: brightness(1.5);
+  }
+
+  /* LINK STYLES */
+  a.text-decoration-none {
+    color: #0984e3;
+    font-weight: 500;
+    position: relative;
+  }
+
+  a.text-decoration-none:hover {
+    color: #0652dd;
+    transition: color 0.3s ease;
+  }
+
+  a.text-decoration-none::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0652dd;
+    transition: width 0.3s ease;
+  }
+
+  a.text-decoration-none:hover::after {
+    width: 100%;
+  }
+
+  /* TEXT STYLES */
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    color: #636e72;
+    line-height: 1.6;
+  }
+
+  /* RESPONSIVE STYLES */
+  @media (max-width: 992px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .card-body {
+      padding: 30px;
+    }
+
+    .form-control {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+
+    .btn-login {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-section,
+    .registro-section,
+    .success-section {
+      padding: 40px 0;
+    }
+
+    .container {
+      padding: 15px;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .form-label {
+      font-size: 1rem;
+    }
+
+    .form-control {
+      font-size: 0.9rem;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .form-label {
+      font-size: 0.95rem;
+    }
+
+    .form-control {
+      font-size: 0.85rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/* Estilo específico para el contenedor #carrito */
+#carrito {
+    z-index: 2000 !important; /* Asegura que esté por encima del backdrop de Bootstrap (≈1050) */
+}
+
+/* Contenedor del carrito */
+.carrito-container {
+    position: fixed; /* Cambiado a fixed para que no dependa del flujo del navbar */
+    top: 70px; /* Ajustado para estar justo debajo del navbar (ajústalo según la altura real del navbar) */
+    right: 20px; /* Mantiene la alineación a la derecha */
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000; /* Suficiente con el z-index de #carrito */
+    max-height: 500px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave para abrir/cerrar */
+}
+
+/* Estado oculto del carrito */
+.carrito-hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px); /* Prepara la posición inicial para la animación */
+}
+
+/* Estado visible del carrito */
+.carrito-visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Final de la animación */
+    animation: slideIn 0.3s ease-in-out; /* Reducido a 0.3s para una apertura más natural */
+}
+
+/* Elementos dentro del carrito */
+.carrito-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.carrito-item:hover {
+    transform: scale(1.02);
+}
+
+.carrito-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0000CD;
+    text-align: right;
+    margin: 10px 0;
+}
+
+.btn-vaciar {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-vaciar:hover {
+    background-color: #c82333;
+}
+
+.btn-pagar {
+    background-color: #0000CD;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pagar:hover {
+    background-color: #000099;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-danger {
+    border-radius: 5px;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+}
+
+.text-primary {
+    color: #0000CD !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .carrito-container {
+        width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+        right: 5%;
+        top: 60px; /* Ajusta según la altura del navbar en móvil */
+    }
+}
+
+@media (max-width: 576px) {
+    .carrito-container {
+        width: 95%;
+        right: 2.5%;
+        top: 50px; /* Ajusta para pantallas muy pequeñas */
+    }
+}

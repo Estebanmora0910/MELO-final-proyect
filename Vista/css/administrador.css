@@ -1,0 +1,124 @@
+/* Sidebar como ya estaba */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1565c0;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-sidebar {
+  width: 40px !important;
+  height: auto !important;
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* Estilo del panel de bienvenida */
+.welcome-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.welcome-box h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-box p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para los accesos rápidos (cajas) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.card:hover {
+  background-color: #e2e8f0;
+}
+
+.card span {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1rem;
+}
+
+.sidebar nav ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.sidebar nav ul li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+.logout-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+.logout-button {
+  width: 100%;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #dc2626;
+}
